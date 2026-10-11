@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="《相遇》见面会满意度反馈 | 匿名 · 2分钟 · 交友求助选填">
+<title>相遇 · 满意度问卷｜把感受说给我们听</title>
+<style>
+  @font-face{font-family:"MashanZheng";src:url("mashanzheng.woff2") format("woff2")}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:750px;height:1334px;overflow:hidden;position:relative;color:#fff;margin:0 auto;
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;
+    background:linear-gradient(175deg,#2560B4 0%,#1A4A96 42%,#0C2757 100%)}
+  .grain{position:absolute;inset:0;opacity:.35;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23p)' opacity='0.06'/%3E%3C/svg%3E")}
+  .glowT{position:absolute;left:50%;top:80px;width:820px;height:560px;transform:translateX(-50%);
+    background:radial-gradient(circle,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 60%);pointer-events:none}
+  .wrap{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center;padding:64px 60px 0}
+  .school-cn{font-family:"MashanZheng","Songti SC",serif;font-size:46px;color:#fff;letter-spacing:.16em;text-indent:.16em;text-shadow:0 4px 18px rgba(1,43,139,.35)}
+  .school-en{font-size:14px;color:#C6ECFF;letter-spacing:.2em;margin-top:12px}
+  .gt{margin-top:52px}
+  .gt-cn{font-family:"Songti SC","STSong",serif;font-size:92px;color:#F0D9A9;letter-spacing:.2em;text-indent:.2em;font-weight:700;text-shadow:0 12px 30px rgba(0,37,122,.32)}
+  .gt-line{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:24px;color:#D5F6FF}
+  .gt-line span{width:100px;height:1px;background:linear-gradient(90deg,rgba(213,246,255,0),#D5F6FF)}
+  .gt-line span:last-child{background:linear-gradient(90deg,#D5F6FF,rgba(213,246,255,0))}
+  .gt-line i{font-style:normal;font-size:15px}
+  .gt-en{font-size:19px;color:#D5F6FF;letter-spacing:.4em;text-indent:.4em;margin-top:16px}
+  .intro{margin-top:40px;font-size:23px;color:#EAF4FF;letter-spacing:.08em;line-height:1.9}
+  .intro b{color:#F0D9A9}
+  .chips{display:flex;gap:16px;margin-top:30px}
+  .chip{font-size:18px;color:#EAF4FF;background:rgba(255,255,255,.1);border:1px solid rgba(213,246,255,.3);
+    border-radius:99px;padding:9px 22px;letter-spacing:.06em}
+  .btn{position:absolute;left:50%;bottom:250px;transform:translateX(-50%);
+    width:480px;padding:28px 0;border-radius:99px;text-align:center;text-decoration:none;
+    background:linear-gradient(180deg,#F5DC96 0%,#E3BE72 40%,#C9A45C 100%);
+    box-shadow:0 14px 34px rgba(2,12,32,.5),inset 0 2px 6px rgba(255,255,255,.5);
+    color:#1D3F73;font-size:30px;font-weight:700;letter-spacing:.14em}
+  .btn-note{position:absolute;left:0;right:0;bottom:196px;text-align:center;
+    color:rgba(234,244,255,.65);font-size:15px;letter-spacing:.1em}
+  .foot{position:absolute;left:0;right:0;bottom:36px;text-align:center;
+    color:rgba(234,244,255,.45);font-size:15px;letter-spacing:.14em;line-height:1.9}
+  .flap{position:absolute;left:0;right:0;bottom:0;height:150px;z-index:-1;
+    background:linear-gradient(180deg,#123E7E 0%,#0A2A5C 100%)}
+</style>
+</head>
+<body>
+<div class="glowT"></div>
+<div class="grain"></div>
+<div class="wrap">
+  <div class="school-cn">华北电力大学</div>
+  <div class="school-en">NORTH CHINA ELECTRIC POWER UNIVERSITY · 2026级MBA周末二班</div>
+  <div class="gt">
+    <div class="gt-cn">反馈问卷</div>
+    <div class="gt-line"><span></span><i>✦</i><span></span></div>
+    <div class="gt-en">YOUR VOICE MATTERS</div>
+  </div>
+  <div class="intro">见面会结束了，故事才刚刚开始。<br>花你 <b>2 分钟</b>，把感受说给我们听</div>
+  <div class="chips">
+    <span class="chip">匿名提交</span>
+    <span class="chip">约 2 分钟</span>
+    <span class="chip">交友 · 求助 选填</span>
+  </div>
+</div>
+<a class="btn" id="surveyBtn" href="https://wj.qq.com/s2/28158254/l4o4/">打开问卷</a>
+<div class="btn-note">点击按钮填写 · 10月13日 24:00 截止</div>
+<div class="flap"></div>
+<div class="foot">携手并肩 · 共谱新篇<br>华北电力大学 2026级MBA周末二班 班委</div>
+<script>
+  const SURVEY_URL = "https://wj.qq.com/s2/28158254/l4o4/";  // ← 腾讯问卷建好后把链接填到这里
+  const btn = document.getElementById('surveyBtn');
+  if (SURVEY_URL) btn.href = SURVEY_URL;
+  else btn.addEventListener('click', e => e.preventDefault());
+</script>
+</body>
+</html>
